@@ -3,19 +3,19 @@ plugins {
     id("maven-publish")
 }
 
-val mod_id: String by project
-val mod_name: String by project
-val mod_author: String by project
-val minecraft_version: String by project
-val minecraft_version_range: String by project
-val fabric_version: String by project
-val fabric_loader_version: String by project
-val license: String by project
-val mod_description: String by project
-val credits: String by project
+val mod_id: String = project.property("mod_id") as String
+val mod_name: String = project.property("mod_name") as String
+val mod_author: String = project.property("mod_author") as String
+val minecraft_version: String = project.property("minecraft_version") as String
+val minecraft_version_range: String = project.property("minecraft_version_range") as String
+val fabric_version: String = project.property("fabric_version") as String
+val fabric_loader_version: String = project.property("fabric_loader_version") as String
+val license: String = project.property("license") as String
+val mod_description: String = project.property("mod_description") as String
+val credits: String = project.property("credits") as String
+val neoforge_version: String = project.property("neoforge_version") as String
+val neoforge_loader_version_range: String = project.property("neoforge_loader_version_range") as String
 val java_version: Int = project.property("java_version").toString().toInt()
-val neoforge_version: String by project
-val neoforge_loader_version_range: String by project
 
 base {
     archivesName = "${mod_id}-${project.name}-${minecraft_version}"
